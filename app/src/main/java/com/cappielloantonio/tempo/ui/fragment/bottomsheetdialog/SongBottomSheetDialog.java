@@ -94,8 +94,8 @@ public class SongBottomSheetDialog extends BottomSheetDialogFragment implements 
 
         TextView artistSong = view.findViewById(R.id.song_artist_text_view);
         String artistNames = songBottomSheetViewModel.getSong().getArtists() != null
-                ? Objects.requireNonNull(song.getArtists()).stream().map(ArtistID3::getName).collect(Collectors.joining(", "))
-                : "Unknown Artist";
+                ? Objects.requireNonNull(songBottomSheetViewModel.getSong().getArtists()).stream().map(ArtistID3::getName).collect(Collectors.joining(", "))
+                : song.getArtist();
         artistSong.setText(artistNames);
 
         ToggleButton favoriteToggle = view.findViewById(R.id.button_favorite);

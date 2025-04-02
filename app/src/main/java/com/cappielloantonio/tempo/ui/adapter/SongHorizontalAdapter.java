@@ -100,7 +100,7 @@ public class SongHorizontalAdapter extends RecyclerView.Adapter<SongHorizontalAd
 
         String artistNames = song.getArtists() != null
                 ? song.getArtists().stream().map(ArtistID3::getName).collect(Collectors.joining(", "))
-                : "Unknown Artist";
+                : song.getArtist();
         holder.item.searchResultSongSubtitleTextView.setText(
                 holder.itemView.getContext().getString(
                         R.string.song_subtitle_formatter,
