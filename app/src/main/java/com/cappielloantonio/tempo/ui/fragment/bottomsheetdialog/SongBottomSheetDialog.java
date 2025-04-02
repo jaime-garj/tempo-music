@@ -25,6 +25,7 @@ import com.cappielloantonio.tempo.glide.CustomGlideRequest;
 import com.cappielloantonio.tempo.model.Download;
 import com.cappielloantonio.tempo.service.MediaManager;
 import com.cappielloantonio.tempo.service.MediaService;
+import com.cappielloantonio.tempo.subsonic.models.ArtistID3;
 import com.cappielloantonio.tempo.subsonic.models.Child;
 import com.cappielloantonio.tempo.ui.activity.MainActivity;
 import com.cappielloantonio.tempo.ui.dialog.PlaylistChooserDialog;
@@ -38,6 +39,9 @@ import com.cappielloantonio.tempo.viewmodel.HomeViewModel;
 import com.cappielloantonio.tempo.viewmodel.SongBottomSheetViewModel;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.common.util.concurrent.ListenableFuture;
+
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 @UnstableApi
 public class SongBottomSheetDialog extends BottomSheetDialogFragment implements View.OnClickListener {
@@ -89,7 +93,10 @@ public class SongBottomSheetDialog extends BottomSheetDialogFragment implements 
         titleSong.setSelected(true);
 
         TextView artistSong = view.findViewById(R.id.song_artist_text_view);
-        artistSong.setText(songBottomSheetViewModel.getSong().getArtist());
+        String artistNames = songBottomSheetViewModel.getSong().getArtists() != null
+                ? Objects.requireNonNull(song.getArtists()).stream().map(ArtistID3::getName).collect(Collectors.joining(", "))
+                : "Unknown Artist";
+        artistSong.setText(artistNames);
 
         ToggleButton favoriteToggle = view.findViewById(R.id.button_favorite);
         favoriteToggle.setChecked(songBottomSheetViewModel.getSong().getStarred() != null);
