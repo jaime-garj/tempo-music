@@ -26,6 +26,8 @@ open class Child(
     @ColumnInfo
     var artist: String? = null,
     @ColumnInfo
+    var artists: List<ArtistID3>? = null,
+    @ColumnInfo
     var track: Int? = null,
     @ColumnInfo
     var year: Int? = null,

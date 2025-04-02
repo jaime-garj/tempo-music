@@ -17,6 +17,7 @@ import com.cappielloantonio.tempo.databinding.ItemHorizontalTrackBinding;
 import com.cappielloantonio.tempo.glide.CustomGlideRequest;
 import com.cappielloantonio.tempo.interfaces.ClickCallback;
 import com.cappielloantonio.tempo.subsonic.models.AlbumID3;
+import com.cappielloantonio.tempo.subsonic.models.ArtistID3;
 import com.cappielloantonio.tempo.subsonic.models.Child;
 import com.cappielloantonio.tempo.subsonic.models.DiscTitle;
 import com.cappielloantonio.tempo.util.Constants;
@@ -30,6 +31,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @UnstableApi
 public class SongHorizontalAdapter extends RecyclerView.Adapter<SongHorizontalAdapter.ViewHolder> implements Filterable {
@@ -96,12 +98,15 @@ public class SongHorizontalAdapter extends RecyclerView.Adapter<SongHorizontalAd
 
         holder.item.searchResultSongTitleTextView.setText(song.getTitle());
 
+        String artistNames = song.getArtists() != null
+                ? song.getArtists().stream().map(ArtistID3::getName).collect(Collectors.joining(", "))
+                : "Unknown Artist";
         holder.item.searchResultSongSubtitleTextView.setText(
                 holder.itemView.getContext().getString(
                         R.string.song_subtitle_formatter,
                         this.showAlbum ?
                                 song.getAlbum() :
-                                song.getArtist(),
+                                artistNames,
                         MusicUtil.getReadableDurationString(song.getDuration(), false),
                         MusicUtil.getReadableAudioQualityString(song)
                 )

@@ -8,6 +8,7 @@ import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
 import com.cappielloantonio.tempo.App;
+import com.cappielloantonio.tempo.database.converter.ArtistID3Converters;
 import com.cappielloantonio.tempo.database.converter.DateConverters;
 import com.cappielloantonio.tempo.database.dao.ChronologyDao;
 import com.cappielloantonio.tempo.database.dao.DownloadDao;
@@ -24,6 +25,7 @@ import com.cappielloantonio.tempo.model.Queue;
 import com.cappielloantonio.tempo.model.RecentSearch;
 import com.cappielloantonio.tempo.model.Server;
 import com.cappielloantonio.tempo.model.SessionMediaItem;
+import com.cappielloantonio.tempo.subsonic.models.Artist;
 import com.cappielloantonio.tempo.subsonic.models.Playlist;
 
 @UnstableApi
@@ -32,7 +34,7 @@ import com.cappielloantonio.tempo.subsonic.models.Playlist;
         entities = {Queue.class, Server.class, RecentSearch.class, Download.class, Chronology.class, Favorite.class, SessionMediaItem.class, Playlist.class},
         autoMigrations = {@AutoMigration(from = 9, to = 10)}
 )
-@TypeConverters({DateConverters.class})
+@TypeConverters({DateConverters.class, ArtistID3Converters.class})
 public abstract class AppDatabase extends RoomDatabase {
     private final static String DB_NAME = "tempo_db";
     private static AppDatabase instance;
