@@ -25,7 +25,6 @@ import com.cappielloantonio.tempo.model.Queue;
 import com.cappielloantonio.tempo.model.RecentSearch;
 import com.cappielloantonio.tempo.model.Server;
 import com.cappielloantonio.tempo.model.SessionMediaItem;
-import com.cappielloantonio.tempo.subsonic.models.Artist;
 import com.cappielloantonio.tempo.subsonic.models.Playlist;
 
 @UnstableApi
