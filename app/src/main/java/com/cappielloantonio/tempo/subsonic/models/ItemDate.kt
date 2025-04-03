@@ -14,7 +14,10 @@ open class ItemDate : Parcelable {
     var month: Int? = null
     var day: Int? = null
 
-    fun getFormattedDate(): String {
+    fun getFormattedDate(): String? {
+        if (year == null && month == null && day == null) {
+            return null
+        }
         val calendar = Calendar.getInstance()
         val dateFormat = SimpleDateFormat("MMMM dd, yyyy", Locale.getDefault())
 
