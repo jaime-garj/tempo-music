@@ -138,7 +138,13 @@ public class AlbumPageFragment extends Fragment implements ClickCallback {
                 String genres = album.getGenres() != null
                         ? Objects.requireNonNull(album.getGenres()).stream().map(ItemGenre::getName).collect(Collectors.joining(", "))
                         : album.getGenre();
-                bind.albumGenresTextview.setText(genres);
+                if (genres != null && !genres.isEmpty()) {
+                    bind.albumGenresTextview.setText(genres);
+                    bind.albumGenresTextview.setVisibility(View.VISIBLE);
+                }
+                else{
+                    bind.albumGenresTextview.setVisibility(View.GONE);
+                }
 
                 if (album.getReleaseDate() != null && album.getOriginalReleaseDate() != null) {
                     if (album.getReleaseDate().getFormattedDate() != null && album.getOriginalReleaseDate().getFormattedDate() != null) {
