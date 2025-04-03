@@ -29,6 +29,7 @@ import com.cappielloantonio.tempo.interfaces.ClickCallback;
 import com.cappielloantonio.tempo.model.Download;
 import com.cappielloantonio.tempo.service.MediaManager;
 import com.cappielloantonio.tempo.service.MediaService;
+import com.cappielloantonio.tempo.subsonic.models.ItemGenre;
 import com.cappielloantonio.tempo.ui.activity.MainActivity;
 import com.cappielloantonio.tempo.ui.adapter.SongHorizontalAdapter;
 import com.cappielloantonio.tempo.util.Constants;
@@ -133,7 +134,11 @@ public class AlbumPageFragment extends Fragment implements ClickCallback {
                 bind.albumArtistLabel.setText(album.getArtist());
                 bind.albumReleaseYearLabel.setText(album.getYear() != 0 ? String.valueOf(album.getYear()) : "");
                 bind.albumSongCountDurationTextview.setText(getString(R.string.album_page_tracks_count_and_duration, album.getSongCount(), album.getDuration() != null ? album.getDuration() / 60 : 0));
-                bind.albumGenresTextview.setText(album.getGenre());
+
+                String genres = album.getGenres() != null
+                        ? Objects.requireNonNull(album.getGenres()).stream().map(ItemGenre::getName).collect(Collectors.joining(", "))
+                        : album.getArtist();
+                bind.albumGenresTextview.setText(genres);
 
                 if (album.getReleaseDate() != null && album.getOriginalReleaseDate() != null) {
                     bind.albumReleaseYearsTextview.setVisibility(View.VISIBLE);
