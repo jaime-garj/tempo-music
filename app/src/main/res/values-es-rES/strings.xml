@@ -276,7 +276,7 @@
     <string name="settings_audio_transcode_format_download">Formato de transcodificación para las descargas</string>
     <string name="settings_audio_transcode_format_mobile">Formato de transcodificación en red de datos móviles</string>
     <string name="settings_audio_transcode_format_wifi">Formato de transcodificación en red Wi-Fi</string>
-    <string name="settings_audio_transcode_priority_summary">Si está habilitada, Tempo no reproducirá la pista con las opciones de transcodificación.</string>
+    <string name="settings_audio_transcode_priority_summary">Si está habilitada, Tempo no reproducirá la pista con las opciones de transcodificación que aparecen a continuación.</string>
     <string name="settings_audio_transcode_priority_title">Dar prioridad a las opciones de transcodificación del servidor</string>
     <string name="settings_audio_transcode_priority_toast">Prioridad a la hora de transcodificar una pista</string>
     <string name="settings_buffering_strategy">Estrategia de buffer</string>
@@ -343,7 +343,7 @@
     <string name="track_info_path">Ruta del archivo</string>
     <string name="track_info_size">Tamaño</string>
     <string name="track_info_suffix">Extensión</string>
-    <string name="settings_summary_skip_min_star_rating">Cuando estás escuchando una radio del artista, un mix instantáneo, o cuando está todo en modo aleatorio, las pistas por debajo de cierta valoración se ignorarán.</string>
+    <string name="settings_summary_skip_min_star_rating">Cuando estás escuchando una radio del artista, un mix instantáneo, o cuando se reproduce música en modo aleatorio, las pistas por debajo de cierta valoración se ignorarán.</string>
     <string name="settings_summary_replay_gain">La ganancia de reproducción es una característica que permite ajustar el nivel de volumen de las pistas de audio para una experiencia auditiva coherente. Esta opción solo es efectiva si la pista contiene los metadatos necesarios.</string>
     <string name="settings_summary_scrobble">El scrobbling es una característica que permite a tu dispositivo enviar información sobre los temas que escuchas al servidor de música. Esta información ayuda a crear recomendaciones personalizadas basadas en tus gustos musicales.</string>
     <string name="settings_sync_starred_tracks_for_offline_use_title">Sincronizar pistas destacadas para uso sin conexión</string>
