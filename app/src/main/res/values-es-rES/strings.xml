@@ -398,7 +398,7 @@
     <string name="song_list_page_starred">Pistas destacadas</string>
     <string name="song_list_page_top">Los mejores temas de %1$s</string>
     <string name="song_list_page_year">Año %1$d</string>
-    <string name="settings_summary_transcoding">La prioridad que se aplica al modo de transcodificación. Si se selecciona \"Direct play\", la tasa de bits del archivo no cambiará.</string>
+    <string name="settings_summary_transcoding">La prioridad que se aplica al modo de transcodificación. Si se selecciona \"Reproducción directa\", la tasa de bits del archivo no cambiará.</string>
     <string name="starred_sync_dialog_summary">Descargar los temas destacados podría consumir una gran cantidad de datos</string>
     <string name="starred_sync_dialog_title">Sincronizar los temas destacados</string>
     <string name="streaming_cache_storage_dialog_sub_summary">Para que los cambios tengan efecto, reinicia la app.</string>

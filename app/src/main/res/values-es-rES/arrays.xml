@@ -22,9 +22,9 @@
     </string-array>
 
     <string-array name="pref_image_size_titles">
-        <item>Alto</item>
-        <item>Medio</item>
-        <item>Bajo</item>
+        <item>Alta</item>
+        <item>Media</item>
+        <item>Baja</item>
     </string-array>
     <string-array name="pref_image_size_values">
         <item>-1</item>
@@ -135,7 +135,7 @@
     </string-array>
 
     <string-array name="audio_transcode_format_wifi_list_titles">
-        <item>Direct play</item>
+        <item>Reproducción directa</item>
         <item>Opus</item>
         <item>AAC</item>
         <item>Mp3</item>
@@ -181,7 +181,7 @@
 
     <string-array name="queue_syncing_countdown_titles">
         <item>Diez segundos</item>
-        <item>Cinco seconds</item>
+        <item>Cinco segundos</item>
         <item>Dos seconds</item>
     </string-array>
     <string-array name="queue_syncing_countdown_values">
