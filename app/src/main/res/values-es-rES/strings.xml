@@ -35,7 +35,7 @@
     <string name="artist_catalogue_title">Artistas</string>
     <string name="artist_catalogue_title_expanded">Explorar artistas</string>
     <string name="artist_error_retrieving_radio">Error al obtener radio del artista</string>
-    <string name="artist_error_retrieving_tracks">Error al obtener temas del artista</string>
+    <string name="artist_error_retrieving_tracks">Error al obtener pistas del artista</string>
     <string name="artist_list_page_downloaded">Artistas descargados</string>
     <string name="artist_list_page_starred">Artistas destacados</string>
     <string name="artist_list_page_title">Artistas</string>
@@ -46,7 +46,7 @@
     <string name="artist_page_title_album_section">Álbumes</string>
     <string name="artist_page_title_biography_more_button">Más</string>
     <string name="artist_page_title_biography_section">Biografía</string>
-    <string name="artist_page_title_most_streamed_song_section">Temas más reproducidos</string>
+    <string name="artist_page_title_most_streamed_song_section">Pistas más reproducidas</string>
     <string name="artist_page_title_most_streamed_song_see_all_button">Ver todo</string>
     <string name="battery_optimization_negative_button">Ignorar</string>
     <string name="battery_optimization_neutral_button">No volver a preguntar</string>
@@ -104,7 +104,7 @@
     <string name="home_rearrangement_dialog_positive_button">Guardar</string>
     <string name="home_rearrangement_dialog_title">Reorganizar la página de inicio</string>
     <string name="home_rearrangement_dialog_subtitle">Tenga en cuenta que para que los cambios surtan efecto, hay que reiniciar la aplicación.</string>
-    <string name="home_subtitle_best_of">Mejores temas de tus artistas favoritos</string>
+    <string name="home_subtitle_best_of">Mejores pistas de tus artistas favoritos</string>
     <string name="home_subtitle_made_for_you">Iniciar mix desde una cación que te gustó</string>
     <string name="home_subtitle_new_internet_radio_station">Añadir una nueva emisora de radio</string>
     <string name="home_subtitle_new_podcast_channel">Añadir un nuevo canal de pódcasts</string>
@@ -138,7 +138,7 @@
     <string name="home_title_starred_albums_see_all_button">Ver todo</string>
     <string name="home_title_starred_artists">★ Artistas destacados</string>
     <string name="home_title_starred_artists_see_all_button">Ver todo</string>
-    <string name="home_title_starred_tracks">★ Temas destacados</string>
+    <string name="home_title_starred_tracks">★ Pistas destacadas</string>
     <string name="home_title_starred_tracks_see_all_button">Ver todo</string>
     <string name="home_title_top_songs">Tus mejores canciones</string>
     <string name="home_option_reorganize">Reorganizar</string>
@@ -208,7 +208,7 @@
     <string name="playlist_editor_dialog_title">Editar lista</string>
     <string name="playlist_page_play_button">Reproducir</string>
     <string name="playlist_page_shuffle_button">Aleatorio</string>
-    <string name="playlist_song_count">Lista  •  %1$d temas</string>
+    <string name="playlist_song_count">Lista  •  %1$d pistas</string>
     <string name="podcast_bottom_sheet_add_to_queue">Añadir a la cola</string>
     <string name="podcast_bottom_sheet_delete">Eliminar</string>
     <string name="podcast_bottom_sheet_download">Descargar</string>
@@ -246,7 +246,7 @@
     <string name="settings_equalizer_summary">Ajustes de audio</string>
     <string name="settings_equalizer_title">Ecualizador</string>
     <string name="search_title_artist">Artistas</string>
-    <string name="search_title_song">Temas</string>
+    <string name="search_title_song">Pistas</string>
     <string name="server_signup_dialog_action_low_security">Baja seguridad</string>
     <string name="server_signup_dialog_action_delete_toast">Pulsación larga para eliminar</string>
     <string name="server_signup_dialog_hint_local_address">URL local</string>
@@ -281,7 +281,7 @@
     <string name="settings_audio_transcode_priority_toast">Prioridad a la hora de transcodificar una pista</string>
     <string name="settings_buffering_strategy">Estrategia de buffer</string>
     <string name="settings_buffering_strategy_summary">Para que los cambios surtan efecto, debes reinciar la app.</string>
-    <string name="settings_continuous_play_summary">Permite que la música siga reproduciéndose una vez que la lista de reproducción ha terminado, reproduciendo temas similares</string>
+    <string name="settings_continuous_play_summary">Permite que la música siga reproduciéndose una vez que la lista de reproducción ha terminado, reproduciendo pistas similares</string>
     <string name="settings_continuous_play_title">Reproducción continua</string>
     <string name="settings_covers_cache">Tamaño de la caché de portadas de álbumes</string>
     <string name="settings_data_saving_mode_summary">Evitar descargar las portadas de álbumes para reducir el uso de datos</string>
@@ -345,7 +345,7 @@
     <string name="track_info_suffix">Extensión</string>
     <string name="settings_summary_skip_min_star_rating">Cuando estás escuchando una radio del artista, un mix instantáneo, o cuando se reproduce música en modo aleatorio, las pistas por debajo de cierta valoración se ignorarán.</string>
     <string name="settings_summary_replay_gain">La ganancia de reproducción es una característica que permite ajustar el nivel de volumen de las pistas de audio para una experiencia auditiva coherente. Esta opción solo es efectiva si la pista contiene los metadatos necesarios.</string>
-    <string name="settings_summary_scrobble">El scrobbling es una característica que permite a tu dispositivo enviar información sobre los temas que escuchas al servidor de música. Esta información ayuda a crear recomendaciones personalizadas basadas en tus gustos musicales.</string>
+    <string name="settings_summary_scrobble">El scrobbling es una característica que permite a tu dispositivo enviar información sobre las pistas que escuchas al servidor de música. Esta información ayuda a crear recomendaciones personalizadas basadas en tus gustos musicales.</string>
     <string name="settings_sync_starred_tracks_for_offline_use_title">Sincronizar pistas destacadas para uso sin conexión</string>
     <string name="settings_theme">Tema</string>
     <string name="settings_title_data">Datos</string>
@@ -354,7 +354,7 @@
     <string name="settings_title_replay_gain">Ganancia de reproducción</string>
     <string name="settings_title_scrobble">Rastreo de música (scrobble)</string>
     <string name="settings_title_skip_min_star_rating">Ignorar pistas según su valoración</string>
-    <string name="settings_title_skip_min_star_rating_dialog">Temas con una valoración de:</string>
+    <string name="settings_title_skip_min_star_rating_dialog">Pistas con una valoración de:</string>
     <string name="settings_title_share">Compartir</string>
     <string name="settings_title_syncing">Sincronización</string>
     <string name="settings_title_transcoding">Transcodificación</string>
@@ -396,11 +396,11 @@
     <string name="song_list_page_recently_added">Pistas añadidas recientemente</string>
     <string name="song_list_page_recently_played">Pistas reproducidas recientemente</string>
     <string name="song_list_page_starred">Pistas destacadas</string>
-    <string name="song_list_page_top">Los mejores temas de %1$s</string>
+    <string name="song_list_page_top">Los mejores pistas de %1$s</string>
     <string name="song_list_page_year">Año %1$d</string>
     <string name="settings_summary_transcoding">La prioridad que se aplica al modo de transcodificación. Si se selecciona \"Reproducción directa\", la tasa de bits del archivo no cambiará.</string>
-    <string name="starred_sync_dialog_summary">Descargar los temas destacados podría consumir una gran cantidad de datos</string>
-    <string name="starred_sync_dialog_title">Sincronizar los temas destacados</string>
+    <string name="starred_sync_dialog_summary">Descargar las pistas destacadas podría consumir una gran cantidad de datos</string>
+    <string name="starred_sync_dialog_title">Sincronizar las pistas destacadas</string>
     <string name="streaming_cache_storage_dialog_sub_summary">Para que los cambios tengan efecto, reinicia la app.</string>
     <string name="settings_summary_transcoding_download">Descarga los archivos multimedia transcodificados. Si esta opción está habilitada, no se usará el endpoint de descarga, sino las siguientes opciones.\n\nSi el formato de transcodificación para las descargas se establece en \"Descarga directa\", no se modificará la tasa de bits del archivo.</string>
     <string name="settings_summary_transcoding_estimate_content_length">Cuando el archivo se transcodifica en tiempo real, el cliente normalmente no muestra la duración de la pista. Es posible solicitar a los servidores que soporten esta característica, que calculen la duración de la pista que se está reproduciendo, pero los tiempos de respuesta podrían aumentar.</string>
