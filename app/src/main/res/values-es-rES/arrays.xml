@@ -182,7 +182,7 @@
     <string-array name="queue_syncing_countdown_titles">
         <item>Diez segundos</item>
         <item>Cinco segundos</item>
-        <item>Dos seconds</item>
+        <item>Dos segundos</item>
     </string-array>
     <string-array name="queue_syncing_countdown_values">
         <item>10</item>
