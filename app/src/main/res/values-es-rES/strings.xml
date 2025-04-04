@@ -327,7 +327,7 @@
     <string name="settings_streaming_cache_storage_title">Almacenamiento de la caché de streaming</string>
     <string name="settings_share_title">Habilitar el uso compartido de música</string>
     <string name="settings_sub_summary_scrobble">Debe saber que el scrobbling necesita que el servidor tenga habilitada esta característica</string>
-    <string name="settings_summary_syncing">Devuelve el estado de la cola de reproducción para este usuario. Esto incluye las pistas en la cola, la pista reproduciendo actualmente y su posición. El servidor debe soportar esta característica.</string>
+    <string name="settings_summary_syncing">Devuelve el estado de la cola de reproducción para este usuario. Esto incluye las pistas en la cola, la pista que se está reproduciendo actualmente y su posición. El servidor debe soportar esta característica.</string>
     <string name="settings_summary_streaming_cache_size">%1$s\nEn uso:   %2$s MiB</string>
     <string name="undraw_url">https://undraw.co/</string>
     <string name="track_info_track_number">Número de pista</string>
@@ -402,7 +402,7 @@
     <string name="starred_sync_dialog_summary">Descargar los temas destacados podría consumir una gran cantidad de datos</string>
     <string name="starred_sync_dialog_title">Sincronizar los temas destacados</string>
     <string name="streaming_cache_storage_dialog_sub_summary">Para que los cambios tengan efecto, reinicia la app.</string>
-    <string name="settings_summary_transcoding_download">Descargar los archivos multimedia transcodificados. Si esta opción está habilitada, no se usara el endpoint de descarga, sino las siguientes opciones.\n\nSi el formato de transcodificación para las descargas se establece en \"Descarga directa\", no se modificará la tasa de bits del archivo.</string>
+    <string name="settings_summary_transcoding_download">Descarga los archivos multimedia transcodificados. Si esta opción está habilitada, no se usará el endpoint de descarga, sino las siguientes opciones.\n\nSi el formato de transcodificación para las descargas se establece en \"Descarga directa\", no se modificará la tasa de bits del archivo.</string>
     <string name="settings_summary_transcoding_estimate_content_length">Cuando el archivo se transcodifica en tiempo real, el cliente normalmente no muestra la duración de la pista. Es posible solicitar a los servidores que soporten esta característica, que calculen la duración de la pista que se está reproduciendo, pero los tiempos de respuesta podrían aumentar.</string>
     <string name="settings_sync_starred_tracks_for_offline_use_summary">Si está habilitada, las pistas destacadas se descargarán para uso sin conexión.</string>
     <string name="track_info_summary_downloaded_file">El archivo se ha descargado usando las APIs de Subsonic. El códec y la tasa de bits del archivo se mantienen sin cambios respecto al archivo de origen.</string>
