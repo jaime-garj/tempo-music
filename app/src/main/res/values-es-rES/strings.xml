@@ -157,7 +157,7 @@
     <string name="media_route_menu_title">Emitir</string>
     <string name="menu_add_button">Añadir</string>
     <string name="menu_download_all_button">Descargar todo</string>
-    <string name="menu_download_label">Descargar</string>
+    <string name="menu_download_label">Descargas</string>
     <string name="menu_filter_all">Todo</string>
     <string name="menu_filter_download">Descargado</string>
     <string name="menu_group_by_album">Álbum</string>
