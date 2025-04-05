@@ -13,12 +13,15 @@ import com.cappielloantonio.tempo.App;
 import com.cappielloantonio.tempo.glide.CustomGlideRequest;
 import com.cappielloantonio.tempo.model.Download;
 import com.cappielloantonio.tempo.repository.DownloadRepository;
+import com.cappielloantonio.tempo.subsonic.models.ArtistID3;
 import com.cappielloantonio.tempo.subsonic.models.Child;
 import com.cappielloantonio.tempo.subsonic.models.InternetRadioStation;
 import com.cappielloantonio.tempo.subsonic.models.PodcastEpisode;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 @OptIn(markerClass = UnstableApi.class)
 public class MappingUtil {
@@ -43,6 +46,16 @@ public class MappingUtil {
         bundle.putString("title", media.getTitle());
         bundle.putString("album", media.getAlbum());
         bundle.putString("artist", media.getArtist());
+        List<ArtistID3> artists = media.getArtists();
+        if (artists != null) {
+            String names = artists.stream()
+                    .map(ArtistID3::getName)
+                    .collect(Collectors.joining(", "));
+            bundle.putString("artists", names);
+        }
+        else{
+            bundle.putString("artists", media.getArtist());
+        }
         bundle.putInt("track", media.getTrack() != null ? media.getTrack() : 0);
         bundle.putInt("year", media.getYear() != null ? media.getYear() : 0);
         bundle.putString("genre", media.getGenre());

@@ -12,6 +12,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.cappielloantonio.tempo.glide.CustomGlideRequest
+import com.cappielloantonio.tempo.subsonic.models.ArtistID3
 import com.cappielloantonio.tempo.subsonic.models.Child
 import com.cappielloantonio.tempo.subsonic.models.InternetRadioStation
 import com.cappielloantonio.tempo.subsonic.models.PodcastEpisode
@@ -130,6 +131,9 @@ class SessionMediaItem() {
     @ColumnInfo(name = "timestamp")
     var timestamp: Long? = null
 
+    @ColumnInfo(name = "artists")
+    var artists: List<ArtistID3>? = null
+
     constructor(child: Child) : this() {
         id = child.id
         parentId = child.parentId
@@ -162,6 +166,7 @@ class SessionMediaItem() {
         bookmarkPosition = child.bookmarkPosition
         originalWidth = child.originalWidth
         originalHeight = child.originalHeight
+        artists = child.artists
     }
 
     constructor(podcastEpisode: PodcastEpisode) : this() {

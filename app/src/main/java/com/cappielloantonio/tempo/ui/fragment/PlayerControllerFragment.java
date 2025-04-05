@@ -165,7 +165,7 @@ public class PlayerControllerFragment extends Fragment {
 
     private void setMetadata(MediaMetadata mediaMetadata) {
         playerMediaTitleLabel.setText(String.valueOf(mediaMetadata.title));
-        playerArtistNameLabel.setText(String.valueOf(mediaMetadata.artist));
+        playerArtistNameLabel.setText(String.valueOf(mediaMetadata.extras.getString("artists")));
 
         playerMediaTitleLabel.setSelected(true);
         playerArtistNameLabel.setSelected(true);
