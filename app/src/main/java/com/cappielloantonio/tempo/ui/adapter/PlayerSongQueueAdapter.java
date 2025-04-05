@@ -16,6 +16,7 @@ import com.cappielloantonio.tempo.glide.CustomGlideRequest;
 import com.cappielloantonio.tempo.interfaces.ClickCallback;
 import com.cappielloantonio.tempo.interfaces.MediaIndexCallback;
 import com.cappielloantonio.tempo.service.MediaManager;
+import com.cappielloantonio.tempo.subsonic.models.ArtistID3;
 import com.cappielloantonio.tempo.subsonic.models.Child;
 import com.cappielloantonio.tempo.util.Constants;
 import com.cappielloantonio.tempo.util.MusicUtil;
@@ -25,6 +26,7 @@ import com.google.common.util.concurrent.ListenableFuture;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PlayerSongQueueAdapter extends RecyclerView.Adapter<PlayerSongQueueAdapter.ViewHolder> {
     private final ClickCallback click;
@@ -49,10 +51,13 @@ public class PlayerSongQueueAdapter extends RecyclerView.Adapter<PlayerSongQueue
         Child song = songs.get(position);
 
         holder.item.queueSongTitleTextView.setText(song.getTitle());
+        String artistNames = song.getArtists() != null
+                ? song.getArtists().stream().map(ArtistID3::getName).collect(Collectors.joining(", "))
+                : song.getArtist();
         holder.item.queueSongSubtitleTextView.setText(
                 holder.itemView.getContext().getString(
                         R.string.song_subtitle_formatter,
-                        song.getArtist(),
+                        artistNames,
                         MusicUtil.getReadableDurationString(song.getDuration(), false),
                         MusicUtil.getReadableAudioQualityString(song)
                 )

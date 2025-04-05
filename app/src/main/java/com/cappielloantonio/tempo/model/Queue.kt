@@ -30,6 +30,7 @@ class Queue(override val id: String) : Child(id) {
         title = child.title
         album = child.album
         artist = child.artist
+        artists = child.artists
         track = child.track
         year = child.year
         genre = child.genre
