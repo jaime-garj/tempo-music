@@ -161,7 +161,7 @@ public class PlayerBottomSheetFragment extends Fragment {
             playerBottomSheetViewModel.setLiveDescription(mediaMetadata.extras.getString("description", null));
 
             bind.playerHeaderLayout.playerHeaderMediaTitleLabel.setText(mediaMetadata.extras.getString("title"));
-            bind.playerHeaderLayout.playerHeaderMediaArtistLabel.setText(mediaMetadata.extras.getString("artist"));
+            bind.playerHeaderLayout.playerHeaderMediaArtistLabel.setText(mediaMetadata.extras.getString("artists"));
 
             CustomGlideRequest.Builder
                     .from(requireContext(), mediaMetadata.extras.getString("coverArtId"), CustomGlideRequest.ResourceType.Song)
