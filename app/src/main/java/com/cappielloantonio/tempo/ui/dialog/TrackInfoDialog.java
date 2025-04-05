@@ -51,7 +51,12 @@ public class TrackInfoDialog extends DialogFragment {
 
     private void setTrackInfo() {
         bind.trakTitleInfoTextView.setText(mediaMetadata.title);
-        bind.trakArtistInfoTextView.setText(mediaMetadata.artist);
+        if (mediaMetadata.extras != null && mediaMetadata.extras.getString("artists") != null) {
+            bind.trakArtistInfoTextView.setText(mediaMetadata.extras.getString("artists"));
+        }
+        else{
+            bind.trakArtistInfoTextView.setText(mediaMetadata.artist);
+        }
 
         if (mediaMetadata.extras != null) {
             CustomGlideRequest.Builder
@@ -61,7 +66,7 @@ public class TrackInfoDialog extends DialogFragment {
 
             bind.titleValueSector.setText(mediaMetadata.extras.getString("title", getString(R.string.label_placeholder)));
             bind.albumValueSector.setText(mediaMetadata.extras.getString("album", getString(R.string.label_placeholder)));
-            bind.artistValueSector.setText(mediaMetadata.extras.getString("artist", getString(R.string.label_placeholder)));
+            bind.artistValueSector.setText(mediaMetadata.extras.getString("artists", getString(R.string.label_placeholder)));
             bind.trackNumberValueSector.setText(String.valueOf(mediaMetadata.extras.getInt("track", 0)));
             bind.yearValueSector.setText(String.valueOf(mediaMetadata.extras.getInt("year", 0)));
             bind.genreValueSector.setText(mediaMetadata.extras.getString("genre", getString(R.string.label_placeholder)));
