@@ -176,7 +176,7 @@ public class PlayerControllerFragment extends Fragment {
         playerArtistNameLabel.setSelected(true);
 
         playerMediaTitleLabel.setVisibility(mediaMetadata.title != null && !Objects.equals(mediaMetadata.title, "") ? View.VISIBLE : View.GONE);
-        playerArtistNameLabel.setVisibility(mediaMetadata.artist != null && !Objects.equals(mediaMetadata.artist, "") ? View.VISIBLE : View.GONE);
+        playerArtistNameLabel.setVisibility((mediaMetadata.artist != null || (mediaMetadata.extras != null && mediaMetadata.extras.getString("artists") != null)) && !Objects.equals(mediaMetadata.artist, "") ? View.VISIBLE : View.GONE);
     }
 
     private void setMediaInfo(MediaMetadata mediaMetadata) {
