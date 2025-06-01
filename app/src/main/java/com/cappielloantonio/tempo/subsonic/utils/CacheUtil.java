@@ -6,6 +6,12 @@ import android.net.Network;
 import android.net.NetworkCapabilities;
 
 import com.cappielloantonio.tempo.App;
+import com.cappielloantonio.tempo.subsonic.Subsonic;
+
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.net.URL;
 
 import okhttp3.Interceptor;
 import okhttp3.Request;
@@ -39,20 +45,26 @@ public class CacheUtil {
     };
 
     private boolean isConnected() {
-        ConnectivityManager connectivityManager = (ConnectivityManager) App.getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        try {
+            Subsonic subsonic = App.getSubsonicClientInstance(false);
+            String baseUrl = subsonic.getUrl();
 
-        if (connectivityManager != null) {
-            Network network = connectivityManager.getActiveNetwork();
+            URL url = new URL(baseUrl);
+            String host = url.getHost();
+            int port = url.getPort();
 
-            if (network != null) {
-                NetworkCapabilities capabilities = connectivityManager.getNetworkCapabilities(network);
-
-                if (capabilities != null) {
-                    return capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) && capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED);
-                }
+            if (port == -1) {
+                port = url.getProtocol().equals("https") ? 443 : 80;
             }
-        }
 
-        return false;
+            Socket socket = new Socket();
+            socket.connect(new InetSocketAddress(host, port), 1000); // 1 second timeout
+            socket.close();
+
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }
