@@ -183,6 +183,8 @@ public class PlayerControllerFragment extends Fragment {
         if (mediaMetadata.extras != null) {
             String extension = mediaMetadata.extras.getString("suffix", "Unknown format");
             String bitrate = mediaMetadata.extras.getInt("bitrate", 0) != 0 ? mediaMetadata.extras.getInt("bitrate", 0) + "kbps" : "Original";
+            String samplingRate = mediaMetadata.extras.getInt("samplingRate", 0) != 0 ? mediaMetadata.extras.getInt("samplingRate", 0) / 1000 + " kHz" : "";
+            String bitDepth = mediaMetadata.extras.getInt("bitDepth", 0) != 0 ? mediaMetadata.extras.getInt("bitDepth", 0) + "b" : "";
 
             playerMediaExtension.setText(extension);
 
@@ -190,7 +192,7 @@ public class PlayerControllerFragment extends Fragment {
                 playerMediaBitrate.setVisibility(View.GONE);
             } else {
                 playerMediaBitrate.setVisibility(View.VISIBLE);
-                playerMediaBitrate.setText(bitrate);
+                playerMediaBitrate.setText(bitrate + " • " + samplingRate + " • " + bitDepth);
             }
         }
 
