@@ -163,8 +163,9 @@ public class MusicUtil {
                 " " +
                 child.getBitrate() +
                 "kbps" +
-                " " +
-                child.getSuffix();
+                " • " +
+                child.getBitDepth() + "/" + (child.getSamplingRate() != null ? child.getSamplingRate() / 1000 : "") +
+                " " + child.getSuffix();
     }
 
     public static String getReadablePodcastDurationString(long duration) {
