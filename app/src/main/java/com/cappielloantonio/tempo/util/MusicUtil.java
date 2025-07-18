@@ -15,8 +15,8 @@ import com.cappielloantonio.tempo.repository.DownloadRepository;
 import com.cappielloantonio.tempo.subsonic.models.Child;
 
 import java.text.CharacterIterator;
+import java.text.DecimalFormat;
 import java.text.StringCharacterIterator;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -164,7 +164,7 @@ public class MusicUtil {
                 child.getBitrate() +
                 "kbps" +
                 " • " +
-                child.getBitDepth() + "/" + (child.getSamplingRate() != null ? child.getSamplingRate() / 1000 : "") +
+                (child.getBitDepth() != 0 ? (child.getBitDepth() + "/") + (child.getSamplingRate() != null ? child.getSamplingRate() / 1000 : "") : (child.getSamplingRate() != null ? new DecimalFormat("0.#").format(child.getSamplingRate() / 1000.0) + "kHz" : "")) +
                 " " + child.getSuffix();
     }
 

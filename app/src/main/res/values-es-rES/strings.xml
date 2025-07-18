@@ -410,4 +410,6 @@
     <string name="track_info_summary_original_file">La aplicación solo leerá el archivo original ofrecido por el servidor. La app pedirá al servidor, de forma explícita, el archivo sin transcodificar con la tasa de bits de origen.</string>
     <string name="track_info_summary_server_prioritized">La calidad del archivo a reproducir queda a decisión del servidor. La app no forzará la elección del códec y la tasa de bits para ninguna posible transcodificación.</string>
     <string name="track_info_summary_transcoding_bitrate">La aplicación pedirá al servidor modificar la tasa de bits del archivo. El usuario ha pedido una tasa de bits de %1$s, mientras que el códec del archivo origen se mantendrá sin cambios. Cualquier cambio en la tasa de bits del archivo en el formato seleccionado será realizado por el servidor, que podrá soportar, o no, la operación.</string>
+    <string name="track_info_sampling_rate">Tasa de muestreo</string>
+    <string name="track_info_bit_depth">Profundidad de bits</string>
 </resources>

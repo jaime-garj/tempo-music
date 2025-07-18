@@ -79,6 +79,19 @@ public class TrackInfoDialog extends DialogFragment {
             bind.bitrateValueSector.setText(mediaMetadata.extras.getInt("bitrate", 0) + " kbps");
             bind.pathValueSector.setText(mediaMetadata.extras.getString("path", getString(R.string.label_placeholder)));
             bind.discNumberValueSector.setText(String.valueOf(mediaMetadata.extras.getInt("discNumber", 0)));
+            int samplingRate = mediaMetadata.extras.getInt("samplingRate", 0);
+            if (samplingRate != 0) {
+                bind.samplingRateValueSector.setText(samplingRate + " Hz");
+            } else {
+                bind.samplingRateValueSector.setText(getString(R.string.label_placeholder));
+            }
+
+            int bitDepth = mediaMetadata.extras.getInt("bitDepth", 0);
+            if (bitDepth != 0) {
+                bind.bitDepthValueSector.setText(bitDepth + " bits");
+            } else {
+                bind.bitDepthValueSector.setText(getString(R.string.label_placeholder));
+            }
         }
     }
 
