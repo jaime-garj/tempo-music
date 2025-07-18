@@ -192,7 +192,7 @@ public class PlayerControllerFragment extends Fragment {
                 playerMediaBitrate.setVisibility(View.GONE);
             } else {
                 playerMediaBitrate.setVisibility(View.VISIBLE);
-                playerMediaBitrate.setText(bitrate + " • " + samplingRate + " • " + bitDepth);
+                playerMediaBitrate.setText(bitrate + " • " + bitDepth + " • " + samplingRate);
             }
         }
 
